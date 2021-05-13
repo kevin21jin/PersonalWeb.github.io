@@ -185,6 +185,20 @@ a {
 	padding-bottom: 5px;
 }
 
+.grad-pics {
+	margin-top: 10px;
+	margin-left: 20px;
+	display: inline-flex;
+}
+
+.grad-pics li {
+	padding-right: 25px;
+}
+
+.grad-pics li img {
+	box-shadow: 0px 0px 3px 3px var(--light-shadow-color);
+}
+
 .title2 {
 	font-size: 24px;
 }
@@ -196,6 +210,32 @@ a {
 
 .interests li {
 	padding-bottom: 10px;
+}
+
+.soccer-pics {
+	margin-left: 30px;
+	display: inline-flex;
+}
+
+.soccer-pics li {
+	padding-right: 15px;
+}
+
+.soccer-pics li img {
+	box-shadow: 0px 0px 3px 3px var(--light-shadow-color);
+}
+
+.group1 li {
+	padding-top: 15px;
+}
+
+.group2 li {
+	padding-top: 15px;
+}
+
+.video {
+	box-shadow: 0px 0px 3px 3px var(--light-shadow-color);
+	margin: 15px 0 0 30px;
 }
 
 .header2 {
@@ -243,4 +283,3 @@ a {
 .contact-me ul li a {
 	color: var(--subtitle-color);
 }
-
