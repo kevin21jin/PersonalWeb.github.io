@@ -9,9 +9,32 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="static/javascript/script.js" defer></script>
 
+		<!--ref: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_smooth_scroll_jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("a").on('click', function(event) {
+					if (this.hash !== "") {
+						event.preventDefault();
+						var hash = this.hash;
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function(){
+							window.location.hash = hash;
+						});
+					}
+				});
+			});
+		</script>
+		<style>
+			#section1 
+		    #section2 
+		</style>
 	</head>
 
 	<body>
+
+		<!----------------------header nevegation zone---------------------->
 		<div class="nav">
 			<div class="name">
 				<b>Kevin Jin</b>
@@ -19,15 +42,16 @@
 			<div class="nav-list">
 				<ul>
 					<li>
-						<a href="">ABOUT ME</a>
+						<a id="target1" href="#section1">ABOUT ME</a>
 					</li>
 					<li>
-						<a href="">CONTACT ME</a>
+						<a id="target2" href="#section2">CONTACT ME</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 
+		<!------------------profile picture and introduction------------------>
 		<div class="profile">
 			<div class="left">
 				<img class="profile-picture" src="static/resources/mypic.jpg" width="300">
@@ -38,7 +62,8 @@
 			</div>
 		</div>
 
-		<div class="header1">
+		<!--------------------------about me section-------------------------->
+		<div class="header1" id="section1">
 			<div class="subheader1">
 				<b>About Me</b>
 			</div>
@@ -46,17 +71,17 @@
 				<ul class="links">
 					<li>
 						<a href="https://github.com/kevin21jin">
-							<i class="fa fa-github"></i>
+							<i id="target3" class="fa fa-github"></i>
 						</a>
 					</li>
 					<li>
 						<a href="https://www.linkedin.com/in/kevin-jin-3a1096191/">
-							<i class="fa fa-linkedin"></i>
+							<i id="target4" class="fa fa-linkedin"></i>
 						</a>
 					</li>
 					<li>
 						<a href="https://www.instagram.com/kevin.h.jin/">
-							<i class="fa fa-instagram"></i>
+							<i id="target5" class="fa fa-instagram"></i>
 						</a>
 					</li>
 				</ul>
@@ -64,6 +89,8 @@
 		</div>
 
 		<div class="about-me">
+
+			<!------------------------education section------------------------>
 			<div class="education">
 				<p class='title1'>EDUCATION<p>
 
@@ -95,6 +122,8 @@
 				</ul>
 
 			</div>
+
+			<!------------------------interests section------------------------>
 			<div>
 				<p class="title2">INTERESTS</p>
 				<ul class = "interests">
@@ -144,7 +173,8 @@
 
 		</div>
 
-		<div class="header2">
+		<!--------------------------contact me section-------------------------->
+		<div class="header2" id="section2">
 			<div class="subheader2">
 				<b>Contact Me</b>
 			</div>
@@ -156,11 +186,10 @@
 					</li>
 					<li>
 						<i class="fa fa-envelope"></i>
-						<a href="mailto:k24jin@uwaterloo.ca">: k24jin@uwaterloo.ca</a>
+						<a id="target6" href="mailto:k24jin@uwaterloo.ca">: k24jin@uwaterloo.ca</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-
 	</body>
 </html>
